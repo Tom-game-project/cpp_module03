@@ -1,5 +1,5 @@
 # ex01
-CPP=c++
+CXX=c++
 CPP_FLAG= -Wall -Wextra -Werror -std=c++98
 
 SRC=\
