@@ -1,6 +1,6 @@
 # ex02
 CXX=c++
-CPP_FLAG= -Wall -Wextra -Werror -std=c++98
+CXX_FLAG= -Wall -Wextra -Werror -std=c++98 -pedantic-errors
 
 SRC=\
     ClapTrap.cpp \
@@ -16,10 +16,10 @@ all: $(NAME)
 
 
 %.o: %.cpp
-	$(CPP) $(CPP_FLAG)  -c $< -o $@
+	$(CXX) $(CXX_FLAG)  -c $< -o $@
 
 $(NAME): $(OBJ)
-	$(CPP) $(CPP_FLAG) $(OBJ) -o $(NAME)
+	$(CXX) $(CXX_FLAG) $(OBJ) -o $(NAME)
 
 clean:
 	rm -f $(OBJ)
