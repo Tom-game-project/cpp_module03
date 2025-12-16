@@ -1,29 +1,29 @@
-#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 #include <iostream>
 #include <string>
 
-FragTrap::FragTrap(): ScavTrap() {
+FragTrap::FragTrap(): ClapTrap() {
     this->hit_points = 100;
     this->energy_points = 100;
     this->attack_damage = 30;
     std::cout << "FragTrap Default constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(const std::string name): ScavTrap(name) {
+FragTrap::FragTrap(const std::string name): ClapTrap(name) {
     this->hit_points = 100;
     this->energy_points = 100;
     this->attack_damage = 30;
     std::cout << "FragTrap Constructor for " << this->name << " called" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &src) : ScavTrap(src) {
+FragTrap::FragTrap(const FragTrap &src) : ClapTrap(src) {
     std::cout << "FragTrap copy constructor called" << std::endl;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &rhs) {
     if (this!= &rhs) {
-        ScavTrap::operator=(rhs);
+        ClapTrap::operator=(rhs);
     }
     std::cout << "FragTrap assignment operator called" << std::endl;
     return *this;

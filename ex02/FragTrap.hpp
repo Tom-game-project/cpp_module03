@@ -1,9 +1,10 @@
 #pragma once
+#include "ClapTrap.hpp"
 #ifndef __FRAGTRAP_H__
 #define __FRAGTRAP_H__
-#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
-class FragTrap : public ScavTrap {
+class FragTrap : public ClapTrap {
 public:
 	// Orthodox Canonical Form
     FragTrap();

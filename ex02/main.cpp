@@ -1,4 +1,5 @@
 #include "FragTrap.hpp"
+#include "ClapTrap.hpp"
 #include <iostream>
 
 int main() {
@@ -11,12 +12,11 @@ int main() {
     // EPは49になるはず
     
     std::cout << "\n=== TEST 3: Special Ability ===" << std::endl;
-    robot->guardGate();     // ScavTrap
     robot->highFivesGuys(); // FragTrap
     
     std::cout << "\n=== TEST 4: Polymorphism Safety (Destruction) ===" << std::endl;
     // ClapTrapポインタで受けて削除する場合のテスト（仮想デストラクタの確認）
-    ClapTrap *basePtr = new ScavTrap("Polymorph");
+    ClapTrap *basePtr = new FragTrap("Polymorph");
     delete basePtr; // ScavTrap -> ClapTrap の順で呼ばれればOK
 
     std::cout << "\n=== TEST 5: Stack Destruction Chain ===" << std::endl;

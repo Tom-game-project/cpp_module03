@@ -15,7 +15,7 @@ public:
     // 将来的に呼び出しの際に以下のようにされ、且つ基底クラスのデストラクタにvirtualをつけないと継承クラスのデストラクタが呼び出されず未定義動作を引き起こす可能性がある
     // なので、基底クラスのデストラクタはvirtualにする必要がある
 	virtual ~ClapTrap();
-    void attack(const std::string& target);
+    virtual void attack(const std::string& target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 protected:
