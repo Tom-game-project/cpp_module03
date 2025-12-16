@@ -1,4 +1,4 @@
-# ex01
+# ex02
 CPP=c++
 CPP_FLAG= -Wall -Wextra -Werror -std=c++98
 
@@ -29,6 +29,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean
-
+.PHONY: all clean fclean re
 
