@@ -7,9 +7,11 @@
 class ClapTrap {
 public:
 	// Orthodox Canonical Form
-	ClapTrap(std::string name);
+	ClapTrap();
 	ClapTrap(const ClapTrap &other);
 	ClapTrap &operator=(const ClapTrap &other);
+    // subject
+	ClapTrap(std::string name);
 	~ClapTrap();
     void attack(const std::string& target);
     void takeDamage(unsigned int amount);
