@@ -10,7 +10,7 @@ FragTrap::FragTrap(): ScavTrap() {
     std::cout << "FragTrap Default constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name): ScavTrap(name) {
+FragTrap::FragTrap(const std::string name): ScavTrap(name) {
     this->hit_points = 100;
     this->energy_points = 100;
     this->attack_damage = 30;
@@ -34,6 +34,17 @@ FragTrap &FragTrap::operator=(const FragTrap &rhs) {
 
 FragTrap::~FragTrap () {
     std::cout << "FragTrap Destructor for " << this->name << " called" << std::endl;
+}
+
+void FragTrap::attack(const std::string &target) {
+    if (0 < this->energy_points && 0 < this->hit_points) {
+        this->energy_points -= 1;
+        std::cout << "FragTrap " << this->name << " attacks " << target 
+                  << " aggressively, dealing " << this->attack_damage 
+                  << " points of damage!" << std::endl;
+    } else {
+        std::cout << "FragTrap " << this->name << " requires repair." << std::endl;
+    }
 }
 
 void FragTrap::highFivesGuys(void) {
