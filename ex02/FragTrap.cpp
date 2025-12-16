@@ -18,9 +18,6 @@ FragTrap::FragTrap(const std::string name): ScavTrap(name) {
 }
 
 FragTrap::FragTrap(const FragTrap &src) : ScavTrap(src) {
-    this->hit_points = src.hit_points;
-    this->energy_points = src.energy_points;
-    this->attack_damage = src.attack_damage;
     std::cout << "FragTrap copy constructor called" << std::endl;
 }
 
